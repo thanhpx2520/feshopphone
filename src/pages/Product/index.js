@@ -144,7 +144,7 @@ function Product() {
             <h3>Các sản phẩm liên quan {product.name}</h3>
             <div className="d-flex justify-content-around">
               {relate?.map((product, index) => (
-                <ProductItem product={product} />
+                <ProductItem product={product} key={index} />
               ))}
             </div>
           </div>

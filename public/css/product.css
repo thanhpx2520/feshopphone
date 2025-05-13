@@ -10,6 +10,10 @@
   border-radius: 3px;
   padding: 10px 0;
 }
+
+.product-item.card:hover {
+  text-decoration: none;
+}
 #product-img {
   text-align: center;
 }
