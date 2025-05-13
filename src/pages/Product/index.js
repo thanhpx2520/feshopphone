@@ -7,6 +7,7 @@ import { addToCart } from "../../redux/reducers/CartReducer";
 import CommentItem from "../../components/common/comment-item";
 import { getPrice, getImageProduct } from "../../utils";
 import PaginationComment from "../../components/common/paginationComment";
+import ProductItem from "../../components/common/product-item";
 
 function Product() {
   const { id } = useParams();
@@ -25,6 +26,7 @@ function Product() {
     currentPage: 1,
   });
   const [product, setProduct] = useState({});
+  const [relate, setRelate] = useState([]);
   const [comments, setComments] = useState([]);
   const [dataComment, setDataComment] = useState({
     full_name: customer?.full_name || "",
@@ -82,7 +84,10 @@ function Product() {
 
   useEffect(() => {
     getProductDetails({}, id)
-      .then(({ data }) => setProduct(data))
+      .then(({ data }) => {
+        setProduct(data.product);
+        setRelate(data.related);
+      })
       .catch((err) => console.log(err));
   }, [id]);
 
@@ -131,6 +136,17 @@ function Product() {
           <div className="col-lg-12 col-md-12 col-sm-12">
             <h3>Đánh giá về {product.name}</h3>
             <div dangerouslySetInnerHTML={{ __html: product.description }} />
+          </div>
+        </div>
+
+        <div id="product-body" className="row">
+          <div className="col-lg-12 col-md-12 col-sm-12">
+            <h3>Các sản phẩm liên quan {product.name}</h3>
+            <div className="d-flex justify-content-around">
+              {relate?.map((product, index) => (
+                <ProductItem product={product} />
+              ))}
+            </div>
           </div>
         </div>
 

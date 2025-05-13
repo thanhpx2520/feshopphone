@@ -10,7 +10,7 @@ function Footer() {
             <div id="logo-2" className="col-lg-3 col-md-6 col-sm-12">
               <h2>
                 <Link to={""} href="#">
-                  <img src="images/logo1.jpg" alt="logo" height={70} />
+                  <img id="fix-mt" src="images/logo2.jpg" alt="logo" height={40} width={250} />
                 </Link>
               </h2>
               <p>

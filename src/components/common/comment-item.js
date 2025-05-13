@@ -9,7 +9,7 @@ function CommentItem({ comment }) {
         </li>
         <li>{moment(comment.createdAt).fromNow()}</li>
         <li>
-          <p>{comment.body}</p>
+          <div dangerouslySetInnerHTML={{ __html: comment.body }}></div>
         </li>
       </ul>
     </div>

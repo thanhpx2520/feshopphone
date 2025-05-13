@@ -46,9 +46,8 @@ function Header() {
           <div className="row">
             <div id="logo" className="col-lg-3 col-md-12 col-sm-12">
               <h1>
-                <Link to="/" className="d-flex bg-white p-2 logo-link">
-                  <img id="logo-header" className="img-fluid" src="images/logo1.jpg" alt="" />
-                  <h6 className="text-dark mt-4 ml-2 text-decoration-none">Shop Phone No1 Ha Noi</h6>
+                <Link to="/" className="d-flex p-2">
+                  <img id="logo-header" className="img-fluid" src="images/logo2.jpg" alt="" />
                 </Link>
               </h1>
             </div>
@@ -97,17 +96,17 @@ function Header() {
                 </>
               )}
               |
-              <Link className="mt-4 mr-2 ml-2 my-cart" to="/cart">
+              <Link className="mt-4 mr-2 ml-2 my-cart " to="/cart">
                 giỏ hàng
                 <ul>
                   <li>
-                    <Link to="/cart">
-                      <i className="fas fa-shopping-cart" /> Giỏ hàng của bạn
+                    <Link to="/cart" className="text-white">
+                      <i className="fas fa-shopping-cart text-white" /> Giỏ hàng của bạn
                     </Link>
                   </li>
                   <li>
-                    <Link to="/order">
-                      <i className="fas fa-file-alt fix-icon" /> Đơn hàng đã mua
+                    <Link to="/order" className="text-white">
+                      <i className="fas fa-file-alt fix-icon text-white" /> Đơn hàng đã mua
                     </Link>
                   </li>
                 </ul>

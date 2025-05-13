@@ -9,7 +9,7 @@ body {
   background: #e7ecf4;
 }
 #header {
-  background: #222;
+  background: #fff;
 }
 #logo,
 #search,
@@ -21,13 +21,17 @@ body {
 }
 
 #logo-header {
-  height: 61px;
+  height: 47px;
   margin-top: -5px;
 }
 
 .logo-link,
 .logo-link h6:hover {
   margin-top: -10px;
+}
+
+#fix-mt {
+  margin-top: -22px;
 }
 
 .logo-link:hover {
@@ -52,16 +56,16 @@ body {
 }
 #cart a,
 #cart span {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   text-transform: capitalize;
 }
 #cart {
-  color: #fff;
+  color: #000;
   text-align: right;
 }
 #cart i {
-  color: #fff;
+  color: #000;
 }
 #cart a {
   text-decoration: none;
@@ -75,6 +79,10 @@ body {
   background: #eb1f27;
   border-radius: 100%;
   text-align: center;
+}
+
+#cart span {
+  color: #fff;
 }
 
 .my-cart {
