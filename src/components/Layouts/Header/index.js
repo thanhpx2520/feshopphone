@@ -44,7 +44,7 @@ function Header() {
       <div id="header">
         <div className="container">
           <div className="row">
-            <div id="logo" className="col-lg-3 col-md-12 col-sm-12">
+            <div id="logo" className="col-lg-4 col-md-12 col-sm-12">
               <h1>
                 <Link to="/" className="d-flex p-2">
                   <img id="logo-header" className="img-fluid" src="images/logo2.jpg" alt="" />
@@ -73,7 +73,7 @@ function Header() {
                 </button>
               </form>
             </div>
-            <div id="cart" className="col-lg-5 col-md-12 col-sm-12">
+            <div id="cart" className="col-lg-4 col-md-12 col-sm-12">
               <i className="fa-solid fa-user mr-1" />
               {checkLogin !== null ? (
                 <>
